@@ -1,0 +1,186 @@
+/* reset CSS */
+* {
+    /*Box model stuff*/
+    margin: 0;
+    padding: 0;
+    /*Miscellaneous*/
+    box-sizing: border-box;
+}
+
+ul {
+    /*Miscellaneous*/
+    list-style: none;
+}
+
+body {
+    /*Box model stuff*/
+    background-color: #2C1F4B;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+body * {
+    /*Typography stuff*/
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    /*Box model stuff*/
+    height: 120px;
+    margin-top: 32px;
+}
+
+header div {
+    /*Display stuff*/
+    display: flex;
+    /*Box model stuff*/
+    width: 120px;
+    margin: auto;
+    padding: 4px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    /*Manipulations stuff*/
+    transition: transform .3s;
+    animation: animacaoUsuario .5s 0.5s backwards;
+}
+
+header div:hover {
+    /*Manipulations stuff*/
+    transform: scale(1.1);
+}
+
+header img {
+    /*Box model stuff*/
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    /*Box model stuff*/
+    width: 90%;
+    max-width: 580px;
+    margin: 32px auto;
+    /*Miscellaneous*/
+    gap: 24px;
+}
+
+main section {
+    /*Manipulations stuff*/
+    animation: animacaoCards .8s backwards;
+}
+
+/* Cards */
+
+section {
+    /*Box model stuff*/
+    padding-top: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    /*Typography stuff*/
+    color: white;
+}
+
+section div {
+    /*Box model stuff*/
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+    background-color: #2A2634;
+}
+
+section h2 {
+    /*Miscellaneous*/
+    letter-spacing: -0.47px;
+}
+
+section p {
+    /*Typography stuff*/
+    color: #A1A1AA;
+    /*Miscellaneous*/
+    letter-spacing: -0.18px;
+}
+
+section ul {
+    /*Display stuff*/
+    display: flex;
+    flex-wrap: wrap;
+    /*Box model stuff*/
+    margin-top: 24px;
+    /*Miscellaneous*/
+    gap: 16px;
+}
+
+section ul li {
+    /*Manipulations stuff*/
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    /*Manipulations stuff*/
+    transform: scale(1.1);
+}
+
+.ListaDeJogos img {
+    /*Box model stuff*/
+    width: 90px;
+    border-radius: 9px;
+}
+
+.ListaDeCanais img {
+    /*Box model stuff*/
+    width: 70px;
+    border: 2px solid #443E54;
+    border-radius: 50%;
+}
+
+.ListaDeRedesSociais img {
+    /*Box model stuff*/
+    width: 80px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+/* Animação */
+
+@keyframes animacaoUsuario {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animacaoCards {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section:nth-child(1) {
+    /*Manipulations stuff*/
+    animation-delay: 0s;
+}
+
+main section:nth-child(2) {
+    /*Manipulations stuff*/
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    /*Manipulations stuff*/
+    animation-delay: .8s;
+}
